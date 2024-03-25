@@ -13,7 +13,8 @@
     <a-scene embedded arjs>
         <!-- define your gltf asset -->
         <a-assets>
-            <a-asset-item id="test" src="../Marker-based/models/WS05.gltf"></a-asset-item>
+            <a-asset-item id="unicorn" src="../Marker-based/models/WS05.gltf"></a-asset-item>
+            <a-asset-item id="sofa" src="../Marker-based/models/Koltuk.gltf"></a-asset-item>
         </a-assets>
 
         <a-text value="Hello, World!" position='0.5 0 0' scale='1 1 1' color="red"></a-text>
@@ -21,8 +22,10 @@
         <!-- define a camera which will move according to the marker position -->
         <a-marker-camera preset='hiro'>
             <!-- use your gltf model -->
-            <a-entity position="0 0 0" scale="0.5 0.5 0.5" gltf-model="#test"></a-entity>
+            <a-entity position="0 0 0" scale="0.5 0.5 0.5" gltf-model="#unicorn"></a-entity>
+            <a-entity position="0 0 0" scale="0.5 0.5 0.5" gltf-model="#sofa"></a-entity>
         </a-marker-camera>
     </a-scene>
+    <script src="script.js"></script>
 </body>
 </html>
