@@ -1,6 +1,4 @@
-// loadMarker.js
-
-fetch("test_Hanako")
+fetch("Marker-based/test_Hanako")
   .then(response => {
     if (!response.ok) {
       throw new Error("Datei nicht gefunden");
@@ -11,7 +9,7 @@ fetch("test_Hanako")
     // Hier wird die Datei erfolgreich geladen
     // Setze den Inhalt der Datei als URL für den NFT-Marker
     var nftMarker = document.querySelector("a-nft[type='nft']");
-    nftMarker.setAttribute("url", data);
+    nftMarker.setAttribute("url", "Marker-based/test_Hanako");
   })
   .catch(error => {
     console.error("Fehler beim Laden der Datei:", error);
