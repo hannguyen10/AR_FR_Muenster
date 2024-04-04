@@ -1,4 +1,4 @@
-fetch("output/pinball")
+fetch("test_Hanako")
   .then(response => {
     if (!response.ok) {
       throw new Error("Datei nicht gefunden");
