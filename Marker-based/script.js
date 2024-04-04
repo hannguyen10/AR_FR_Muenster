@@ -7,7 +7,7 @@ fetch("test_Hanako")
   })
   .then(data => {
     var nftMarker = document.querySelector("a-nft[type='nft']");
-    nftMarker.setAttribute("url", "Marker-based/test_Hanako");
+    nftMarker.setAttribute("url", "test_Hanako");
   })
   .catch(error => {
     console.error("Fehler beim Laden der Datei:", error);
