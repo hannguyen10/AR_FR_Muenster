@@ -1,6 +1,6 @@
 // loadMarker.js
 
-fetch("../Marker-based/test_Hanako")
+fetch("test_Hanako")
   .then(response => {
     if (!response.ok) {
       throw new Error("Datei nicht gefunden");
