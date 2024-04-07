@@ -1,4 +1,4 @@
-fetch("hanako")
+fetch("test_Hanako")
   .then(response => {
     if (!response.ok) {
       throw new Error("Datei nicht gefunden");
@@ -7,7 +7,7 @@ fetch("hanako")
   })
   .then(data => {
     var nftMarker = document.querySelector("a-nft[type='nft']");
-    nftMarker.setAttribute("url", "hanako");
+    nftMarker.setAttribute("url", "test_Hanako");
   })
   .catch(error => {
     console.error("Fehler beim Laden der Datei:", error);
