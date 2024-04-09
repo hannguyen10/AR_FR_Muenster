@@ -1,4 +1,4 @@
-fetch("hanako/png")
+fetch("/Marker-based/hanako")
   .then(response => {
     if (!response.ok) {
       throw new Error("Datei nicht gefunden");
@@ -6,8 +6,8 @@ fetch("hanako/png")
     return response.text();
   })
   .then(data => {
-    var nftMarker = document.querySelector("a-nft[type='hanako/png']"); // Korrekte Auswahl des NFT-Markers
-    nftMarker.setAttribute("url", "hanako/png");
+    var nftMarker = document.querySelector("a-nft[type='nft']");
+    nftMarker.setAttribute("url", "/Marker-based/hanako");
 
     // Hinzufügen eines Ereignislisteners für das markerFound-Ereignis
     nftMarker.addEventListener('markerFound', () => {
