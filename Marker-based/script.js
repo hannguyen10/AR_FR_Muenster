@@ -12,7 +12,6 @@ fetch("/Marker-based/hanako")
     // Hinzufügen eines Ereignislisteners für das markerFound-Ereignis
     nftMarker.addEventListener('markerFound', () => {
       console.log('Marker gefunden!');
-      // Hier kannst du weitere Aktionen ausführen, wenn der Marker gefunden wird
     });
   })
   .catch(error => {
