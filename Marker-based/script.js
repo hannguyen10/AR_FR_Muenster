@@ -1,4 +1,4 @@
-fetch("/Marker-based/pinball")
+fetch("/Marker-based/nft-marker-files/pinball")
   .then(response => {
     if (!response.ok) {
       throw new Error("Datei nicht gefunden");
@@ -7,7 +7,7 @@ fetch("/Marker-based/pinball")
   })
   .then(data => {
     var nftMarker = document.querySelector("a-nft[type='nft']");
-    nftMarker.setAttribute("url", "/Marker-based/pinball");
+    nftMarker.setAttribute("url", "/Marker-based/nft-marker-files/pinball");
 
     // Hinzufügen eines Ereignislisteners für das markerFound-Ereignis
     nftMarker.addEventListener('markerFound', () => {
