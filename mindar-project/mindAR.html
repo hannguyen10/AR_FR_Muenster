@@ -8,10 +8,15 @@
   </head>
   <body>
 
-    <a-scene mindar-image="imageTargetSrc: ./hanakoOuran.mind" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: ./sevenTargets.mind" device-orientation-permission-ui="enabled: false">
         <a-assets>
             <a-asset-item id="unicorn" src="../models/WS05.gltf"></a-asset-item>
             <a-asset-item id="manWithBook" src="../models/WS09.gltf"></a-asset-item>
+            <a-asset-item id="dog" src="../models/WS14.gltf"></a-asset-item>
+            <a-asset-item id="horses" src="../models/WS22.gltf"></a-asset-item>
+            <a-asset-item id="fantasyDog" src="../models/WS29.gltf"></a-asset-item>
+            <a-asset-item id="dogWithFeathers" src="../models/WS34.gltf"></a-asset-item>
+            <a-asset-item id="monsterdog" src="../models/WS36.gltf"></a-asset-item>
           </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -21,6 +26,21 @@
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 1">
         <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#manWithBook">
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 2">
+        <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#dog">
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 3">
+        <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#horses">
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 4">
+        <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#fantasyDog">
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 5">
+        <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#dogWithFeathers">
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 6">
+        <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#monsterdog">
       </a-entity>
 
     </a-scene>
