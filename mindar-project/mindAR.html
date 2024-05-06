@@ -10,10 +10,10 @@
   </head>
   <body>
 
-    <a-scene mindar-image="imageTargetSrc: ./hanakoOuran.mind" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: ./ship.mind" device-orientation-permission-ui="enabled: false">
         <a-assets>
             <a-asset-item id="unicorn" src="../Marker-based/models/WS05.gltf"></a-asset-item>
-            <a-asset-item id="manWithBook" src="../Marker-based/models/WS09.gltf"></a-asset-item>
+            <!--<a-asset-item id="manWithBook" src="../Marker-based/models/WS09.gltf"></a-asset-item>-->
           </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -21,9 +21,9 @@
       <a-entity mindar-image-target="targetIndex: 0">
         <a-gltf-model rotation="25 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#unicorn">
       </a-entity>
-      <a-entity mindar-image-target="targetIndex: 1">
+      <!--<a-entity mindar-image-target="targetIndex: 1">
         <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#manWithBook">
-      </a-entity>
+      </a-entity>-->
 
     </a-scene>
   </body>
