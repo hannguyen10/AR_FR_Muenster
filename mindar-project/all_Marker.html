@@ -1,108 +1,114 @@
-
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <!--<script src="/main.js"></script>-->
   </head>
   <body>
-    
-    <a-scene mindar-image="imageTargetSrc: ./mind_files/WS_all_Marker.mind" mindar-image="filterMinCF:0.0001; filterBeta: 0.001" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: ./mind_files/WS_all_Marker.mind; filterMinCF:0.001; filterBeta: 0.001" device-orientation-permission-ui="enabled: false" mouse-detector>
       <!--adding models-->
-        <a-assets>
-            <a-asset-item id="unicorn" src="../models/WS05.gltf"></a-asset-item>
-            <a-asset-item id="manWithBook" src="../models/WS09.gltf"></a-asset-item>
-            <a-asset-item id="dog" src="../models/WS14.gltf"></a-asset-item>
-            <!--<a-asset-item id="horses" src="../models/WS22.gltf"></a-asset-item>-->
-            <a-asset-item id="fantasyDog" src="../models/WS29.gltf"></a-asset-item>
-            <a-asset-item id="dogWithFeathers" src="../models/WS34.gltf"></a-asset-item>
-            <a-asset-item id="monsterdog" src="../models/WS36.gltf"></a-asset-item>
-            <a-asset-item id="zanner" src="../models/WS41.gltf"></a-asset-item>
-            <a-asset-item id="skeletonHuman" src="../models/WS45.gltf"></a-asset-item>
-            <a-asset-item id="dogWithRabbit" src="../models/WS46.gltf"></a-asset-item>
-            <a-asset-item id="griffin" src="../models/WS47.gltf"></a-asset-item>
-            <a-asset-item id="fishAnimal" src="../models/WS59.gltf"></a-asset-item>
-            <a-asset-item id="devilry" src="../models/WS64.gltf"></a-asset-item>
-            <a-asset-item id="manWithJug" src="../models/WS87.gltf"></a-asset-item>
-            <a-asset-item id="knight" src="../models/WS88.gltf"></a-asset-item>
-            <a-asset-item id="pig" src="../models/WS91.gltf"></a-asset-item>
-          </a-assets>
+      <a-assets>
+        <a-asset-item id="unicorn" src="../models/WS05.gltf"></a-asset-item>
+        <a-asset-item id="manWithBook" src="../models/WS09.gltf"></a-asset-item>
+        <a-asset-item id="dog" src="../models/WS14.gltf"></a-asset-item>
+        <!--<a-asset-item id="horses" src="../models/WS22.gltf"></a-asset-item>-->
+        <a-asset-item id="fantasyDog" src="../models/WS29.gltf"></a-asset-item>
+        <a-asset-item id="dogWithFeathers" src="../models/WS34.gltf"></a-asset-item>
+        <a-asset-item id="monsterdog" src="../models/WS36.gltf"></a-asset-item>
+        <a-asset-item id="zanner" src="../models/WS41.gltf"></a-asset-item>
+        <a-asset-item id="skeletonHuman" src="../models/WS45.gltf"></a-asset-item>
+        <a-asset-item id="dogWithRabbit" src="../models/WS46.gltf"></a-asset-item>
+        <a-asset-item id="griffin" src="../models/WS47.gltf"></a-asset-item>
+        <a-asset-item id="fishAnimal" src="../models/WS59.gltf"></a-asset-item>
+        <a-asset-item id="devilry" src="../models/WS64.gltf"></a-asset-item>
+        <a-asset-item id="manWithJug" src="../models/WS87.gltf"></a-asset-item>
+        <a-asset-item id="knight" src="../models/WS88.gltf"></a-asset-item>
+        <a-asset-item id="pig" src="../models/WS91.gltf"></a-asset-item>
+      </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <!--targetIndex for the models-->
       <!--unicorn-->
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-gltf-model rotation="25 25 0" position="0 0 0" scale="0.2 0.2 0.2" src="#unicorn">
+        <a-gltf-model rotation="25 25 0" position="0 0 0" scale="0.2 0.2 0.2" src="#unicorn" mouse-rotation="rotationFactor: 5"></a-gltf-model>
       </a-entity>
+
       <!--manWithBook-->
       <a-entity mindar-image-target="targetIndex: 1">
-        <a-gltf-model rotation="0 80 0" position="0 -0.2 0" scale="0.2 0.2 0.2" src="#manWithBook">
+        <a-gltf-model rotation="0 80 0" position="0 -0.2 0" scale="0.2 0.2 0.2" src="#manWithBook"></a-gltf-model>
       </a-entity>
+
       <!--dog-->
       <a-entity mindar-image-target="targetIndex: 2">
-        <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#dog">
+        <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#dog"></a-gltf-model>
       </a-entity>
+
       <!--fantasyDog floor-->
       <a-entity mindar-image-target="targetIndex: 3">
-        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.4 0.4 0.4" src="#fantasyDog">
+        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.4 0.4 0.4" src="#fantasyDog"></a-gltf-model>
       </a-entity>
+
       <!--fantasyDog floor comparison-->
       <a-entity mindar-image-target="targetIndex: 4">
-        <a-gltf-model rotation="45 0 0" position="0 -0.2 0" scale="0.2 0.2 0.2" src="#fantasyDog">
+        <a-gltf-model rotation="45 0 0" position="0 -0.2 0" scale="0.2 0.2 0.2" src="#fantasyDog"></a-gltf-model>
       </a-entity>
+
       <!--dogWithFeathers-->
       <a-entity mindar-image-target="targetIndex: 5">
-        <a-gltf-model rotation="-20 150 0" position="0 -0.2 0" scale="0.2 0.2 0.2" src="#dogWithFeathers">
+        <a-gltf-model rotation="-20 150 0" position="0 -0.2 0" scale="0.2 0.2 0.2" src="#dogWithFeathers"></a-gltf-model>
       </a-entity>
+
       <!--monsterdog-->
       <a-entity mindar-image-target="targetIndex: 6">
-        <a-gltf-model rotation="0 140 0" position="0.3 -0.6 0" scale="0.4 0.4 0.4" src="#monsterdog">
+        <a-gltf-model rotation="0 140 0" position="0.3 -0.6 0" scale="0.4 0.4 0.4" src="#monsterdog"></a-gltf-model>
       </a-entity>
+
       <!--zanner-->
       <a-entity mindar-image-target="targetIndex: 7">
-        <a-gltf-model rotation="0 100 0" position="0 -0.5 0" scale="0.3 0.3 0.3" src="#zanner">
+        <a-gltf-model rotation="0 100 0" position="0 -0.5 0" scale="0.3 0.3 0.3" src="#zanner"></a-gltf-model>
       </a-entity>
+
       <!--skeletonHuman-->
       <a-entity mindar-image-target="targetIndex: 8">
-        <a-gltf-model rotation="0 -50 0" position="0 -0.2 0" scale="0.2 0.2 0.2" src="#griffin">
+        <a-gltf-model rotation="0 -50 0" position="0 -0.2 0" scale="0.2 0.2 0.2" src="#skeletonHuman"></a-gltf-model>
       </a-entity>
+
       <!--dogWithRabbit-->
       <a-entity mindar-image-target="targetIndex: 9">
-        <a-gltf-model rotation="0 50 0" position="0 0 0" scale="0.2 0.2 0.2" src="#dogWithRabbit">
-        </a-entity>
+        <a-gltf-model rotation="0 50 0" position="0 0 0" scale="0.2 0.2 0.2" src="#dogWithRabbit"></a-gltf-model>
+      </a-entity>
+
       <!--griffin-->
       <a-entity mindar-image-target="targetIndex: 10">
-        <a-gltf-model rotation="45 0 0" position="0 -0.5 0" scale="0.4 0.4 0.4" src="#skeletonHuman">
+        <a-gltf-model rotation="45 0 0" position="0 -0.5 0" scale="0.4 0.4 0.4" src="#griffin"></a-gltf-model>
       </a-entity>
+
       <!--fish-->
       <a-entity mindar-image-target="targetIndex: 11">
-        <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#fishAnimal">
+        <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#fishAnimal"></a-gltf-model>
       </a-entity>
+
       <!--devilry-->
       <a-entity mindar-image-target="targetIndex: 12">
-        <a-gltf-model rotation="70 0 0" position="0 0 0" scale="0.4 0.4 0.4" src="#devilry">
+        <a-gltf-model rotation="70 0 0" position="0 0 0" scale="0.4 0.4 0.4" src="#devilry"></a-gltf-model>
       </a-entity>
-     
-      <!--<a-entity mindar-image-target="targetIndex: 13">
-        <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#widder">
-      </a-entity>
-      
-      <a-entity mindar-image-target="targetIndex: 14">
-        <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#billygoat">
-      </a-entity>-->
+
       <!--manWithJug-->
       <a-entity mindar-image-target="targetIndex: 13">
-        <a-gltf-model rotation="0 50 0" position="0 0 0" scale="0.2 0.2 0.2" src="#manWithJug">
+        <a-gltf-model rotation="0 50 0" position="0 0 0" scale="0.2 0.2 0.2" src="#manWithJug"></a-gltf-model>
       </a-entity>
+
       <!--knight-->
       <a-entity mindar-image-target="targetIndex: 14">
-        <a-gltf-model rotation="0 150 0" position="0 0 0" scale="0.2 0.2 0.2" src="#knight">
+        <a-gltf-model rotation="0 150 0" position="0 0 0" scale="0.2 0.2 0.2" src="#knight"></a-gltf-model>
       </a-entity>
+
       <!--pig-->
       <a-entity mindar-image-target="targetIndex: 15">
-        <a-gltf-model rotation="0 120 0" position="0 0 0" scale="0.3 0.3 0.3" src="#pig">
+        <a-gltf-model rotation="0 120 0" position="0 0 0" scale="0.3 0.3 0.3" src="#pig"></a-gltf-model>
       </a-entity>
 
     </a-scene>
