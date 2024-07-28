@@ -1,5 +1,3 @@
-//import * as THREE from 'three';
-
 document.addEventListener("DOMContentLoaded", function() {
 	const sceneEl = document.querySelector('a-scene');
 	let arSystem;
