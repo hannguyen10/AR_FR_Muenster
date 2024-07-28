@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
     <script src="/main.js"></script>
     <!--<script type="module" src="/three.js"></script>-->
-    
+
   </head>
   <body>
     <div style="position: absolute; z-index: 1000">
@@ -14,7 +14,6 @@
       <button id="unpause-button">Pause beenden</button>
       <p id="text-unpause"></p>
     </div>
-    <div id="ar-container"></div>
     <!--filterMinCF = reduces jittering; filterBeta = reduces delay-->
     <a-scene mindar-image="imageTargetSrc: ./mindar-project/mind_files/WS_all_Marker2.mind; filterMinCF:0.001; filterBeta: 0.001" device-orientation-permission-ui="enabled: false">
       <!--adding models-->
