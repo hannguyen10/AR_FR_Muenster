@@ -1,3 +1,5 @@
+//import * as THREE from 'three';
+
 document.addEventListener("DOMContentLoaded", function() {
 	const sceneEl = document.querySelector('a-scene');
 	let arSystem;
@@ -5,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	  arSystem = sceneEl.systems["mindar-image-system"];
 	});
 
-	const pauseKeepVideoButton = document.querySelector("#pause-button");
+	const pauseButton = document.querySelector("#pause-button");
 	const unpauseButton = document.querySelector("#unpause-button");
 
 
-	pauseKeepVideoButton.addEventListener('click', () => {
+	pauseButton.addEventListener('click', () => {
     arSystem.pause(true); // pause AR, keep video
     const textElement = document.getElementById("text-unpause");
     // Prüfen, ob das Element bereits Text enthält
