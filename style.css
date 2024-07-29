@@ -3,10 +3,10 @@ body {
     font-size: 0.8em;
 }
 
-.stopButton {
+/*.stopButton {
     position: absolute;
     z-index: 1000;
-}
+}*/
 
 h1{
     font-size: 1.4em;
