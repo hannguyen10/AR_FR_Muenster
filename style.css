@@ -3,11 +3,6 @@ body {
     font-size: 0.8em;
 }
 
-/*.stopButton {
-    position: absolute;
-    z-index: 1000;
-}*/
-
 h1{
     font-size: 1.4em;
 }
@@ -27,13 +22,66 @@ a{
     text-align: center;
     color: rgb(255, 255, 255);
 }
-button{
+#startButton{
     font-size: 15px;
     padding: 12px 28px;
     border-radius: 10px;
     background-color: rgb(243, 221, 191);
     border: none;
 }
+.buttonFunctions{
+    font-size: 15px;
+    color: rgb(240, 240, 240);
+    background-color: rgb(99, 97, 97);
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: none;
+}
+#text-unpause{
+    font-size: 15px;
+    background-color: rgb(99, 97, 97);
+    border-radius: 10px;
+    border: none;
+    color: rgb(240, 240, 240);
+}
+.info-background {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .info-content {
+    background-color: rgb(99, 97, 97);
+    margin: 20% auto;
+    padding: 15px;
+    width: 80%;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  #info-text {
+    font-size: 18px;
+    color: rgb(240, 240, 240);
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
 
 @media only screen and (min-width: 768px){
     body{

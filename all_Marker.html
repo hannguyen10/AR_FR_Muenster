@@ -7,14 +7,24 @@
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
-    <script src="main.js"></script>
-    <!--<script type="module" src="/three.js"></script>-->
+    <script src="buttons.js"></script>
+    <!--<script src="ObjectControls.js"></script>-->
   </head>
   <body>
     <div style="position: absolute; z-index: 1000">
-      <button id="pause-button">Pause</button>
-      <button id="unpause-button">Pause beenden</button>
+      <button id="pause-button" class="buttonFunctions">Pause</button>
+      <button id="unpause-button" class="buttonFunctions">Zurück</button>
+      <button id="info-button" class="buttonFunctions">Informationen</button>
       <p id="text-unpause"></p>
+    </div>
+
+    <div id="infoWS" class="info-background">
+      <div class="info-content">
+        <span class="close">&times;</span>
+        <p id="info-text" class="info-text"></p>
+      </div>
+    </div>
+    
     </div>
     <!--filterMinCF = reduces jittering; filterBeta = reduces delay-->
     <a-scene mindar-image="imageTargetSrc: ./mindar-project/mind_files/WS_all_Marker2.mind; filterMinCF:0.001; filterBeta: 0.001" device-orientation-permission-ui="enabled: false">
@@ -31,7 +41,7 @@
         <a-asset-item id="skeletonHuman" src="models/WS45.gltf"></a-asset-item>
         <a-asset-item id="dogWithRabbit" src="models/WS46.gltf"></a-asset-item>
         <a-asset-item id="griffin" src="models/WS47.gltf"></a-asset-item>
-        <a-asset-item id="fishAnimal" src="models/WS59.gltf"></a-asset-item>
+        <a-asset-item id="fish" src="models/WS59.gltf"></a-asset-item>
         <a-asset-item id="devilry" src="models/WS64.gltf"></a-asset-item>
         <a-asset-item id="ram" src="models/WS74.gltf"></a-asset-item>
         <a-asset-item id="billyGoat" src="models/WS75.gltf"></a-asset-item>
@@ -40,81 +50,80 @@
         <a-asset-item id="pig" src="models/WS91.gltf"></a-asset-item>
       </a-assets>
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera> 
       <!--targetIndex for the models-->
-      <!--unicorn  mouse-rotation="rotationFactor: 5" gesture-rotation="rotationFactor: 5" mouse-scale="minScale: 0.3; maxScale: 8" gesture-scale="minScale: 0.3; maxScale: 8"-->
-      <a-entity mindar-image-target="targetIndex: 0">
-        <a-gltf-model rotation="25 25 0" position="0 0 0" scale="0.2 0.2 0.2" src="#unicorn"></a-gltf-model>
+      <!--unicorn  -->
+      <a-entity mindar-image-target="targetIndex: 0" foo>
+          <a-gltf-model rotation="25 25 0" position="0 0 0" scale="0.2 0.2 0.2" src="#unicorn" ></a-gltf-model>
       </a-entity>
 
       <!--manWithBook-->
-      <a-entity mindar-image-target="targetIndex: 1">
+      <a-entity mindar-image-target="targetIndex: 1" foo>
         <a-gltf-model rotation="0 80 0" position="0 -0.2 0" scale="0.2 0.2 0.2" src="#manWithBook"></a-gltf-model>
       </a-entity>
 
       <!--dog-->
-      <a-entity mindar-image-target="targetIndex: 2">
+      <a-entity mindar-image-target="targetIndex: 2" foo>
         <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#dog"></a-gltf-model>
       </a-entity>
 
       <!--dogWithFeathers-->
-      <!--<a-entity mindar-image-target="targetIndex: 5">
+      <!--<a-entity mindar-image-target="targetIndex: 5" foo>
         <a-gltf-model rotation="-20 150 0" position="0 -0.2 0" scale="0.2 0.2 0.2" src="#dogWithFeathers"></a-gltf-model>
       </a-entity>-->
 
       <!--monsterdog-->
-      <a-entity mindar-image-target="targetIndex: 3">
+      <a-entity mindar-image-target="targetIndex: 3" foo>
         <a-gltf-model rotation="0 140 0" position="0.3 -0.6 0" scale="0.4 0.4 0.4" src="#monsterdog"></a-gltf-model>
       </a-entity>
 
       <!--zanner-->
-      <a-entity mindar-image-target="targetIndex: 4">
+      <a-entity mindar-image-target="targetIndex: 4" foo>
         <a-gltf-model rotation="0 100 0" position="0 -0.5 0" scale="0.3 0.3 0.3" src="#zanner"></a-gltf-model>
       </a-entity>
 
       <!--skeletonHuman-->
-      <a-entity mindar-image-target="targetIndex: 5">
+      <a-entity mindar-image-target="targetIndex: 5" foo>
         <a-gltf-model rotation="0 -50 0" position="0 -0.2 0" scale="0.2 0.2 0.2" src="#skeletonHuman"></a-gltf-model>
       </a-entity>
 
       <!--dogWithRabbit-->
-      <a-entity mindar-image-target="targetIndex: 6">
+      <a-entity mindar-image-target="targetIndex: 6" foo>
         <a-gltf-model rotation="0 50 0" position="0 0 0" scale="0.2 0.2 0.2" src="#dogWithRabbit"></a-gltf-model>
       </a-entity>
 
       <!--griffin-->
-      <a-entity mindar-image-target="targetIndex: 7">
+      <a-entity mindar-image-target="targetIndex: 7" foo>
         <a-gltf-model rotation="45 0 0" position="0 -0.9 0" scale="0.4 0.4 0.4" src="#griffin"></a-gltf-model>
       </a-entity>
 
       <!--fish-->
-      <a-entity mindar-image-target="targetIndex: 8">
-        <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#fishAnimal"></a-gltf-model>
+      <a-entity mindar-image-target="targetIndex: 8" foo>
+        <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#fish"></a-gltf-model>
       </a-entity>
 
       <!--devilry left-->
-      <a-entity mindar-image-target="targetIndex: 9">
+      <a-entity mindar-image-target="targetIndex: 9" foo>
         <a-gltf-model rotation="70 0 0" position="0 0 0" scale="0.4 0.4 0.4" src="#devilry"></a-gltf-model>
       </a-entity>
 
       <!--devilry right-->
-      <a-entity mindar-image-target="targetIndex: 10">
+      <a-entity mindar-image-target="targetIndex: 10" foo>
         <a-gltf-model rotation="70 0 0" position="0 0 0" scale="0.4 0.4 0.4" src="#devilry"></a-gltf-model>
       </a-entity>
 
       <!--manWithJug-->
-      <a-entity mindar-image-target="targetIndex: 11">
+      <a-entity mindar-image-target="targetIndex: 11" foo>
         <a-gltf-model rotation="0 50 0" position="0 0 0" scale="0.2 0.2 0.2" src="#manWithJug"></a-gltf-model>
       </a-entity>
 
       <!--knight-->
-      <a-entity mindar-image-target="targetIndex: 12">
+      <a-entity mindar-image-target="targetIndex: 12" foo>
         <a-gltf-model rotation="0 150 0" position="0 0 0" scale="0.2 0.2 0.2" src="#knight"></a-gltf-model>
       </a-entity>
 
       <!--pig-->
-      <!--<a-entity mindar-image-target="targetIndex: 15">
+      <!--<a-entity mindar-image-target="targetIndex: 15" foo>
         <a-gltf-model rotation="0 120 0" position="0 0 0" scale="0.3 0.3 0.3" src="#pig"></a-gltf-model>
       </a-entity>-->
 
