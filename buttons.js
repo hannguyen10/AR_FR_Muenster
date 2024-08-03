@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	const infoButton = document.querySelector("#info-button");
 
 	const infoTexts = {
-		unicorn: "Titel: Einhorn auf dem Rücken eines Mannes<br>Material: Gips<br>Datierung: 1926<br>Kommentar: Originalstein noch am Münster",
-		manWithBook: "Titel: Mann mit Buch<br>Material: Steinkopie<br>Datierung: 1913<br>Kommentar: Original nicht vollständig erhalten. Bei Kopie 2005 erneut leicht verändert",
+		unicorn: "<ul><h3>Titel</h3><li>Einhorn auf dem Rücken eines Mannes</li><br><h3>Material</h3><li>Gips</li><br><h3>Datierung</h3><li>1926</li><br><h3>Kommentar</h3><li>Originalstein noch am Münster</li></ul>",
+		manWithBook: "<h3>Titel</h3><p>Mann mit Buch</p><h3>Material</h3><br>Steinkopie<br><h3>Datierung</h3><br>1913<br><h3>Kommentar</h3><br>Original nicht vollständig erhalten. Bei Kopie 2005 erneut leicht verändert",
 		dog: "Titel: Hund<br>Material: Originalstein<br>Datierung: um 1260/70",
 		horses: "Titel:Pferd<br>Material: Originalstein<br>Datierung: um 1250",
 		fantasyDog: "Titel: Hundeähnliches Fantasiewesen<br>Material: Steinkopie/Originalstein<br>Datierung: Körper: unbekannt, Klauen und Beute: 1. Hälfte 16. Jh.<br>Kommentar: Modell zeigt den Zustand bis 1998 mit einem nicht datierten Körper und einem Rest des nicht vollständig erhaltenen Originals. Bei der Kopie wurde auf die Zusammenstellung verzichtet und nur der neue Teil übernommen",
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		const infoTextElement = document.getElementById("info-text");
 
 		if (currentModelId && infoTexts[currentModelId]) {
-			// Setzen Sie den Inhalt als HTML, damit <br> Tags interpretiert werden
+			// Setzen Sie den Inhalt als HTML, damit HTML Tags interpretiert werden
 			infoTextElement.innerHTML = infoTexts[currentModelId];
 			infoTextElement.className = `info-text ${currentModelId}`;
 		} else {
