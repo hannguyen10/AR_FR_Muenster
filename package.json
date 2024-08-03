@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "aframe-orbit-controls-component-2": "^0.1.14",
     "express": "^4.18.3",
     "lodash": "^4.17.21",
     "package-json": "^10.0.0",

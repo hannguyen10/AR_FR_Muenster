@@ -22,6 +22,18 @@ a{
     text-align: center;
     color: rgb(255, 255, 255);
 }
+.a-dom-overlay:not(.a-no-style) {
+    padding: 0 !important;
+    pointer-events: auto !important;
+}
+
+#touch-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
 #startButton{
     font-size: 15px;
     padding: 12px 28px;

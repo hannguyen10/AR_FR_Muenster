@@ -28,6 +28,7 @@
     </div>
     <!--filterMinCF = reduces jittering; filterBeta = reduces delay-->
     <a-scene mindar-image="imageTargetSrc: ./mindar-project/mind_files/WS_all_Marker2.mind; filterMinCF:0.001; filterBeta: 0.001" device-orientation-permission-ui="enabled: false">
+ 
       <!--adding models-->
       <a-assets>
         <a-asset-item id="unicorn" src="models/WS05.gltf"></a-asset-item>
@@ -50,11 +51,11 @@
         <a-asset-item id="pig" src="models/WS91.gltf"></a-asset-item>
       </a-assets>
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera> 
+      <a-camera position="0 0 0" look-controls="touchEnabled=true"></a-camera> 
       <!--targetIndex for the models-->
       <!--unicorn  -->
-      <a-entity mindar-image-target="targetIndex: 0" foo>
-          <a-gltf-model rotation="25 25 0" position="0 0 0" scale="0.2 0.2 0.2" src="#unicorn" ></a-gltf-model>
+      <a-entity mindar-image-target="targetIndex: 0">
+          <a-gltf-model rotation="25 25 0" position="0 0 0" scale="0.2 0.2 0.2" src="#unicorn"></a-gltf-model>
       </a-entity>
 
       <!--manWithBook-->
