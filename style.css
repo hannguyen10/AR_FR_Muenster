@@ -40,9 +40,17 @@ a{
 #text-unpause{
     font-size: 15px;
     background-color: rgb(240, 240, 240);
+    width: 80%;
     border-radius: 10px;
     border: none;
     color: rgb(99, 97, 97);
+    display: inline-block;
+}
+.unpause-container{
+  text-align: center;
+  position: fixed;
+  top: 10%;
+
 }
 ul{
     list-style: none;
@@ -91,7 +99,7 @@ h3{
   }
   
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 600px){
     body{
         font-size: 1.2em;
     }
@@ -104,5 +112,21 @@ h3{
     /*.info-content{
         
     }   */
+    #text-unpause{
+        font-size: 30px;
+    }
+    .buttonFunctions{
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    #info-text{
+        font-size: 30px;
+    }   
+
+}
+/*desktop*/
+@media only screen and (min-width: 768px) {
 
 }
