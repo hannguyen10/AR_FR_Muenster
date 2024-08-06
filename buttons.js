@@ -10,24 +10,24 @@ document.addEventListener("DOMContentLoaded", function () {
 	const infoButton = document.querySelector("#info-button");
 
 	const infoTexts = {
-		unicorn: "<ul><h3>Titel</h3><li>Einhorn auf dem Rücken eines Mannes</li><br><h3>Material</h3><li>Gips</li><br><h3>Datierung</h3><li>1926</li><br><h3>Kommentar</h3><li>Originalstein noch am Münster</li></ul>",
-		manWithBook: "<h3>Titel</h3><p>Mann mit Buch</p><h3>Material</h3><br>Steinkopie<br><h3>Datierung</h3><br>1913<br><h3>Kommentar</h3><br>Original nicht vollständig erhalten. Bei Kopie 2005 erneut leicht verändert",
-		dog: "Titel: Hund<br>Material: Originalstein<br>Datierung: um 1260/70",
-		horses: "Titel:Pferd<br>Material: Originalstein<br>Datierung: um 1250",
-		fantasyDog: "Titel: Hundeähnliches Fantasiewesen<br>Material: Steinkopie/Originalstein<br>Datierung: Körper: unbekannt, Klauen und Beute: 1. Hälfte 16. Jh.<br>Kommentar: Modell zeigt den Zustand bis 1998 mit einem nicht datierten Körper und einem Rest des nicht vollständig erhaltenen Originals. Bei der Kopie wurde auf die Zusammenstellung verzichtet und nur der neue Teil übernommen",
-		dogWithFeather: "Titel: Hundeähnliches Wesen mit Vogelfedern<br>Material: Originalstein<br>Datierung: 1. H.16.Jh.",
-		monsterdog: "Titel: Monsterhund<br>Material: Originalstein<br>Datierung: 1. H.16.Jh.",
-		zanner: "Titel: Akrobat 'Zanner'<br>Material: Originalstein<br>Datierung: 1. H.16.Jh.",
-		skeletonHuman: "Titel: Skelettierter Mensch<br>Material: Originalstein<br>Datierung: Körper: 1. H. 16. Jh., Kopf: später<br>Kommentar: Bei der Kopie 1939 wurde der Kopf verändert",
-		dogWithRabbit: "Titel: Hund mit erbeutetem Hasen<br>Material: Originalstein<br>Datierung: 1. H.16. Jh.",
-		griffin: "Titel: Greif<br>Material: Originalstein<br>Datierung: 1. H.16. Jh.<br>Kommentar: Kopf später angefügt",
-		fish: "Titel: Fischartiges Tier<br>Material: Originalstein<br>Datierung: 1781",
-		devilry: "Titel: Teufelswesen<br>Material: Originalstein<br>Datierung: 1555",
-		ram: "Titel: Widder<br>Material: Originalstein<br>Datierung: um 1270",
-		billyGoat: "Titel: Ziegenbock<br>Material: Originalstein<br>Datierung: um 1270",
-		manWithJug: "Titel: Mann mit Krug und Kapuzenmantel<br>Material: Gips<br>Datierung: 1914<br>Kommentar: Originalstein noch am Münster",
-		knight: "Titel: Ritter 'Hochmut'<br>Material: Gips<br>Datierung: 1914<br>Kommentar: Original im Augustinermuseum",
-		pig: "Titel: Schwein 'Unmäßigkeit'<br>Material: Gips<br>Datierung: 1914<br>Kommentar: Original im Augustinermuseum"
+		unicorn: "<ul><h3>Einhorn auf dem Rücken eines Mannes</h3><br><li>Gips, 1926</li><br><li>Originalstein noch am Münster</li></ul>",
+		manWithBook: "<ul><h3>Mann mit Buch</h3><br><li>Steinkopie, 1913</li><br><li>Original nicht vollständig erhalten. Bei Kopie 2005 erneut leicht verändert</li></ul>",
+		dog: "<ul><h3>Hund</h3><br><li>Originalstein, um 1260/70</li></ul>",
+		horses: "<ul><h3>Pferd</h3><br><li>Originalstein, um 1250</li></ul>",
+		fantasyDog: "<ul><h3>Hundeähnliches Fantasiewesen</h3><br><li>Steinkopie/Originalstein, Körper: unbekannt, Klauen und Beute: 1. Hälfte 16. Jh.</li><br><li>Modell zeigt den Zustand bis 1998 mit einem nicht datierten Körper und einem Rest des nicht vollständig erhaltenen Originals. Bei der Kopie wurde auf die Zusammenstellung verzichtet und nur der neue Teil übernommen</li></ul>",
+		dogWithFeather: "<ul><h3>Hundeähnliches Wesen mit Vogelfedern</h3><br><li>Originalstein, 1. H.16.Jh.</li></ul>",
+		monsterdog: "<ul><h3>Monsterhund</h3><br><li>Originalstein, 1. H.16.Jh.</li></ul>",
+		zanner: "<ul><h3>Akrobat 'Zanner'</h3><br><li>Originalstein, 1. H.16.Jh.</li></ul>",
+		skeletonHuman: "<ul><h3>Skelettierter Mensch</h3><br><li>Originalstein, Körper: 1. H. 16. Jh., Kopf: später</li><br><li>Bei der Kopie 1939 wurde der Kopf verändert</li></ul>",
+		dogWithRabbit: "<ul><h3>Hund mit erbeutetem Hasen</h3><br><li>Originalstein, 1. H.16. Jh.</li></ul>",
+		griffin: "<ul><h3>Greif</h3><br><li>Originalstein, 1. H.16. Jh.</li><br><li>Kopf später angefügt</li></ul>",
+		fish: "<ul><h3>Fischartiges Tier</h3><br><li>Originalstein, 1781</li></ul>",
+		devilry: "<ul><h3>Teufelswesen</h3><br><li>Originalstein, 1555</li></ul>",
+		ram: "<ul><h3>Widder</h3><br><li>Originalstein, um 1270</li></ul>",
+		billyGoat: "<ul><h3>Ziegenbock</h3><br><li>Originalstein, um 1270</li></ul>",
+		manWithJug: "<ul><h3>Mann mit Krug und Kapuzenmantel</h3><br><li>Gips, 1914</li><br><li>Originalstein noch am Münster</li></ul>",
+		knight: "<ul><h3>Ritter 'Hochmut'</h3><br><li>Gips, 1914</li><br><li>Original im Augustinermuseum</li></ul>",
+		pig: "<ul><h3>Schwein 'Unmäßigkeit'</h3><br><li>Gips, 1914</li><br><li>Original im Augustinermuseum</li></ul>"
 	};
 
 	let currentModelId = "";
