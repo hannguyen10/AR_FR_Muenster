@@ -1,8 +1,11 @@
 /*mobile*/
+
+/*homepage*/
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8em;
     margin: 0;
+    
 }
 
 h1{
@@ -13,9 +16,11 @@ a{
     text-decoration: none;
 }
 #logoFR{
-    width: 40%;
+    width: 50%;
 }
-
+#logoBackground{
+    background-color: black;
+}
 .titleImage {
     background-image: url("WS_Test2.jpg");
     height: 220px;
@@ -24,27 +29,40 @@ a{
     background-size: 100% 100%;
 }
 .description{
-    text-align: center;
+    display: flex;
+    text-align: left;
     color: rgb(99, 97, 97);
     margin: 8px;
+    flex-direction: column;
+}
+#welcomeTitle {
+    color: rgb(118, 23, 23);
+    text-align: center;
 }
 #markerHints{
     list-style-type: circle;
     padding-left: 20px;
+   
 }
-#startButtonContainer{
-    display: flex;
-    justify-content: center;
+#funText{
+    text-align: center;
 }
-#startButton{
-    font-size: 15px;
-    padding: 8px 15px;
+a:link{
+    color: rgb(118, 23, 23);
+
+}
+#homeButtonsContainer{
+   text-align: center;
+}
+.homeButtons{
+    font-size: 13px;
+    padding: 8px 10px;
     border-radius: 10px;
     background-color: rgb(118, 23, 23);
     border: none;
     color: rgb(240, 240, 240);
 }
-#startButton a:visited{
+.homeButtons a:visited{
     color: rgb(240, 240, 240);
 }
 a:visited{
@@ -58,6 +76,22 @@ a:visited{
 hr{
     margin-top: 5%;
 }
+
+/*Impressum*/
+#titleImpressum{
+    color: rgb(118, 23, 23);
+    text-align: center;
+}
+.impressumContainer{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    padding: 8px;
+    margin: 8px;
+    color: rgb(99, 97, 97);
+}
+
+/*AR application*/
 .buttonFunctions{
     font-size: 15px;
     color: rgb(240, 240, 240);
@@ -139,6 +173,22 @@ h3{
     .titleImage{
         height: 500px;
     }
+    #logoFR{
+        height: 200px;
+    }
+    .description{
+        font-size: 1.1em;
+    }
+    .homeButtons{
+        font-size: 20px;
+    }
+    #impressum{
+        font-size: 20px;
+    }
+    .impressumContainer{
+        padding: 20px;
+        margin: 20px;
+    }
     #text-unpause{
         font-size: 30px;
     }
@@ -155,6 +205,13 @@ h3{
 }
 /*desktop*/
 @media only screen and (min-width: 768px) {
+    #logoFR{
+        width: 30%;
+       
+    }
+    .description{
+        text-align: center;
+    }
     .unpause-container{
        left: 22%;
 

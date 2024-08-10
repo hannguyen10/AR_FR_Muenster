@@ -9,34 +9,33 @@
 </head>
 
 <body>
-    <img src="Logo_FR.jpeg" id="logoFR">
-    <div class="titleImage"></div>
+    <div id="logoBackground">
+    <img src="Bauverein.png" id="logoFR">
+    </div>
+    <!--<div class="titleImage"></div>-->
+    <h2 id="welcomeTitle">Willkommen zu (Titel)!</h2>
     <div class="description">
-        <h2>Willkommen zu (Titel)!</h2>
-        <p>Die AR-Anwendung soll dazu dienen, die Wasserspeier des Freiburger Münsters näher kennenzulernen.</p>
-        <p>Von den ca. 80 Wasserspeier wurden 18 Wasserspeier 3D-Modelle erstellt.</p>
-        <p>Wenn ihr sie alle entdecken wollt, müsst ihr selbst auf die Suche gehen!</p>
-        <p>Damit die 3D-Modelle erscheinen, müsst ihr die Wandabschnitte (Marker) abscannen, wo der Original-Wasserspeier direkt drüber hängt.</p>
-        <p>Das Scannen beginnt, wenn das Scansymbol erscheint.</p>
-        <p>Achtet auf folgende Punkte, um die gesuchten Wandabschnitte der Pfeiler besser zu erkennen:</p>
+        <p>Diese AR-Anwendung lädt euch dazu ein, die faszinierenden Wasserspeier des Freiburger Münsters aus nächster Nähe zu erkunden.</p>
+        <p>Von den ca. 80 Wasserspeiern wurden 18 in detaillierte 3D-Modelle umgewandelt.</p>
+        <p>Um alle zu entdecken, müsst ihr selbst auf Entdeckungstour gehen!</p>
+        <p>So funktioniert es:</p>
+        <p>Scannt die Wandabschnitte (Marker) ein, über denen sich die Original-Wasserspeier befinden, damit die 3D-Modelle erscheinen.</p>
+        <p>Das Scannen beginnt, sobald das Scansymbol sichtbar ist.</p>
+        <p>Achtet auf folgende Punkte, um die gesuchten Wandabschnitte der Pfeiler leichter zu finden:</p>
         <ul id="markerHints">
             <li>Sucht nach markanten und auffälligen Stellen (Bsp. Symbole, Muster, usw.)</li>
-            <li>Marker sind immer auf flachen Wänden</li>
-            <li>Vom Standort des Pfeilers könnt ihr direkt oben den passenden Wasserspeier sehen</li>
+            <li>Marker befinden sich immer auf flachen Wänden</li>
+            <li>Von der Position des Pfeilers aus könnt ihr direkt den dazugehörigen Wasserspeier oben sehen.</li>
         </ul>
-
-        <p>Viel Spaß bei der Anwendung!</p>
+        <p>Für eine bessere Orientierung findet ihr unten einen PDF-Downloadlink mit einer Karte, auf der die Wasserspeier markiert sind:</p>
+        <p id="funText">Viel Spaß mit der Anwendung!</p>
     </div>
-    <div id="startButtonContainer">
-        <button id="startButton"><a href="all_Marker.html">Zur AR-Anwendung</a></button>
+    <div id="homeButtonsContainer">
+        <a href ="WS_Karte.pdf" download><button class="homeButtons">Karte herunterladen</button></a>
+        <button class="homeButtons"><a href="all_Marker.html">Zur AR-Anwendung</a></button>
     </div>
-
     <hr>
-
-    <footer>
-        <p id="impressum"><a href="impressum.html">Impressum</a></p>
-    </footer>
-
+    <p id="impressum"><a href="impressum.html">Impressum</a></p>
 </body>
 
 </html>
