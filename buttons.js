@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		const textElement = document.getElementById("text-unpause");
 		// Prüfen, ob das Element bereits Text enthält
 		if (!textElement.hasChildNodes()) {
-			const textnode = document.createTextNode("Die Kamera wieder auf dem Marker richten, wenn sie zurückkehren möchten");
+			const textnode = document.createTextNode("Richten Sie die Kamera wieder auf dem Marker, um Zurückzukehren.");
 			textElement.appendChild(textnode);
 		}
 	});
