@@ -15,10 +15,10 @@ h1{
 a{
     text-decoration: none;
 }
-#logoFR{
+.logoFR{
     width: 50%;
 }
-#logoBackground{
+.logoBackground{
     background-color: black;
 }
 .titleImage {
@@ -89,6 +89,18 @@ hr{
     padding: 8px;
     margin: 8px;
     color: rgb(99, 97, 97);
+}
+#logoContainer{
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#logoHFU{
+    width: 60%;
+    padding-bottom: 25px;
+}
+#muensterImpressum{
+    width: 55%;
 }
 
 /*AR application*/
@@ -173,7 +185,7 @@ h3{
     .titleImage{
         height: 500px;
     }
-    #logoFR{
+    .logoFR{
         height: 200px;
     }
     .description{
@@ -188,6 +200,12 @@ h3{
     .impressumContainer{
         padding: 20px;
         margin: 20px;
+    }
+    #logoContainer{
+        padding: 40px;
+    }
+    #logoHFU{
+        width: 60%;
     }
     #text-unpause{
         font-size: 30px;
@@ -204,9 +222,9 @@ h3{
 
 }
 /*desktop*/
-@media only screen and (min-width: 768px) {
-    #logoFR{
-        width: 30%;
+@media only screen and (min-width: 830px) {
+    .logoFR{
+        width: 20%;
        
     }
     .description{
@@ -215,6 +233,22 @@ h3{
     .unpause-container{
        left: 22%;
 
+    }
+    .impressumContainer{
+        text-align: center;
+    }
+    #logoContainer{
+       
+        display: flex;
+        justify-content: center;
+    }
+    #logoHFU{
+        width: 50%;
+        padding-right: 30px;
+        
+    }
+    #muensterImpressum{
+        width: 45%;
     }
 
 }
