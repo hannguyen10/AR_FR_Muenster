@@ -34,8 +34,7 @@
   <!--filterMinCF = reduces jittering; filterBeta = reduces delay-->
 
 
-  <a-scene mindar-image="imageTargetSrc: ./mindar-project/mind_files/WS_all_Marker2.mind; 
-  filterMinCF:0.001; filterBeta: 0.001">
+  <a-scene mindar-image="imageTargetSrc: ./mindar-project/mind_files/WS_all_Marker2.mind; filterMinCF:0.001; filterBeta: 0.001">
 
     <!--adding models-->
     <a-assets>
@@ -60,6 +59,7 @@
     </a-assets>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+    
     <!--targetIndex for the models-->
     <!--unicorn  -->
     <a-entity mindar-image-target="targetIndex: 0">
@@ -75,6 +75,16 @@
     <a-entity mindar-image-target="targetIndex: 2">
       <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#dog"></a-gltf-model>
     </a-entity>
+
+    <!--horses-->
+    <!--<a-entity mindar-image-target="targetIndex: 2">
+      <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#horses"></a-gltf-model>
+    </a-entity>-->
+
+    <!--fantasyDog-->
+     <!--<a-entity mindar-image-target="targetIndex: 2">
+      <a-gltf-model rotation="45 0 0" position="0 0 0" scale="0.2 0.2 0.2" src="#fantasyDog"></a-gltf-model>
+    </a-entity>-->
 
     <!--dogWithFeathers-->
     <!--<a-entity mindar-image-target="targetIndex: 5">
@@ -120,6 +130,16 @@
     <a-entity mindar-image-target="targetIndex: 10">
       <a-gltf-model rotation="70 0 0" position="0 0 0" scale="0.4 0.4 0.4" src="#devilry"></a-gltf-model>
     </a-entity>
+
+    <!--ram-->
+    <!--<a-entity mindar-image-target="targetIndex: 10">
+      <a-gltf-model rotation="70 0 0" position="0 0 0" scale="0.4 0.4 0.4" src="#ram"></a-gltf-model>
+    </a-entity>-->
+
+    <!--billyGoat-->
+    <!--<a-entity mindar-image-target="targetIndex: 10">
+      <a-gltf-model rotation="70 0 0" position="0 0 0" scale="0.4 0.4 0.4" src="#billyGoat"></a-gltf-model>
+    </a-entity>-->
 
     <!--manWithJug-->
     <a-entity mindar-image-target="targetIndex: 11">
