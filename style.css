@@ -39,7 +39,7 @@ a{
     color: rgb(118, 23, 23);
     text-align: center;
 }
-#markerHints{
+.markerHints{
     list-style-type: circle;
     padding-left: 20px;
    
