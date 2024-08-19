@@ -51,7 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	pauseButton.addEventListener('click', () => {
 		arSystem.pause(true); // pause model
 		const textElement = document.getElementById("text-unpause");
-		// Prüfen, ob das Element bereits Text enthält
+
+		// check whether the element already contains text
 		if (!textElement.hasChildNodes()) {
 			const textnode = document.createTextNode("Richten Sie die Kamera wieder auf dem Marker, um Zurückzukehren.");
 			textElement.appendChild(textnode);
@@ -61,7 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	unpauseButton.addEventListener('click', () => {
 		arSystem.unpause(); // unpause model
 		const textElement = document.getElementById("text-unpause");
-		// Entfernen aller Kinder des Textcontainers
+
+		// remove all children of the text container
 		while (textElement.firstChild) {
 			textElement.removeChild(textElement.firstChild);
 		}
@@ -73,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		const infoTextElement = document.getElementById("info-text");
 
 		if (currentModelId && infoTexts[currentModelId]) {
-			// Setzen Sie den Inhalt als HTML, damit HTML Tags interpretiert werden
+			// set the content as HTML so that HTML tags are interpreted
 			infoTextElement.innerHTML = infoTexts[currentModelId];
 			infoTextElement.className = `info-text ${currentModelId}`;
 		} else {
@@ -94,11 +96,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 
-	// arReady event triggered when ready
+
 	sceneEl.addEventListener("arReady", (event) => {
 		console.log("MindAR is ready")
 	});
-	// arError event triggered when something went wrong. Mostly browser compatbility issue
+
 	sceneEl.addEventListener("arError", (event) => {
 		console.log("MindAR failed to start")
 	});
