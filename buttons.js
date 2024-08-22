@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const infoButton = document.querySelector("#info-button");
 
 	const infoTexts = {
-		unicorn: "<ul><h3>Einhorn auf dem Rücken eines Mannes</h3><br><li>Gips, 1926</li><br><li>Originalstein noch am Münster</li></ul>",
+		unicorn: "<ul><h3>Einhorn auf dem Rücken eines Mannes</h3><br><li>Gips,1926</li><br><li>Originalstein noch am Münster</li></ul>",
 		manWithBook: "<ul><h3>Mann mit Buch</h3><br><li>Steinkopie, 1913</li><br><li>Original nicht vollständig erhalten. Bei Kopie 2005 erneut leicht verändert</li></ul>",
 		dog: "<ul><h3>Hund</h3><br><li>Originalstein, um 1260/70</li></ul>",
 		horses: "<ul><h3>Pferd</h3><br><li>Originalstein, um 1250</li></ul>",
@@ -77,10 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (currentModelId && infoTexts[currentModelId]) {
 			// set the content as HTML so that HTML tags are interpreted
 			infoTextElement.innerHTML = infoTexts[currentModelId];
-			infoTextElement.className = `info-text ${currentModelId}`;
+			
 		} else {
-			infoTextElement.innerHTML = "Scannen Sie die Marker, um mehr Informationen über die Wasserspeier zu kriegen";
-			infoTextElement.className = "info-text";
+			infoTextElement.innerHTML = 
+			"Scannen Sie die Marker, um mehr Informationen über die Wasserspeier zu kriegen";
+			
 		}
 
 		infoWS.style.display = "block";
