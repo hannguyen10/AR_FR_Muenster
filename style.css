@@ -21,13 +21,6 @@ a{
 .logoBackground{
     background-color: black;
 }
-.titleImage {
-    background-image: url("WS_Test2.jpg");
-    height: 220px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
 .description{
     display: flex;
     text-align: left;
