@@ -1,67 +1,125 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- TODO: remove -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <style>
-      body {
-        margin: 0;
-        overflow: hidden;
-      }
+  <!-- TODO: remove -->
 
-      #container {
-        width: 100vw;
-        height: 90vh;
-        position: relative;
-        overflow: hidden;
-      }
+  <style>
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
 
-      #ui {
-        position: absolute;
-      }
-      #infoWS {
-        opacity: 1;
-      }
+    #container {
+      position: fixed;
+      inset: 0;
+    }
 
-      canvas {
-        z-index: 100 !important;
-        touch-action: none !important;
-      }
+    .mindar-ui-scanning .scanning .inner {
+      border-radius: 10px;
+      overflow: hidden;
+    }
 
-    </style>
-  </head>
+    #ui {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      pointer-events: none;
 
-  <body>
-    <div id="container"></div>
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 0.7rem;
+    }
 
-    <div style="position: absolute">
-      <button id="pause-button" class="buttonFunctions">Pause</button>
-      <button id="unpause-button" class="buttonFunctions">Zurück</button>
-      <button id="info-button" class="buttonFunctions">
-        <i class="fa-solid fa-info"></i>
+    #ui nav {
+      width: min(90%, 380px);
+
+      pointer-events: auto;
+    }
+
+    #infoWS {
+      opacity: 1;
+    }
+
+    canvas {
+      z-index: 100 !important;
+      touch-action: none !important;
+    }
+
+    #container video,
+    #container canvas {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <!-- Bottom Navigation -->
+  <div id="ui">
+    <nav class="flex justify-around items-center
+                bg-white/90 rounded-2xl
+                py-3 shadow-xl backdrop-blur-xl">
+
+      <button id="guide-button" class="flex flex-col items-center text-gray-600">
+        <i class="fa-solid fa-book-open text-xl"></i>
+        <span class="text-[11px]">Anleitung</span>
       </button>
-      <div class="unpause-container">
-        <p id="text-unpause"></p>
-      </div>
-    </div>
 
-    <div id="infoWS" class="info-background">
-      <div class="info-container">
-        <div class="info-content">
-          <span class="close">&times;</span>
-          <p id="info-text" class="info-text"></p>
-        </div>
+      <button id="map-button" class="flex flex-col items-center text-gray-600">
+        <i class="fa-solid fa-map text-xl"></i>
+        <span class="text-[11px]">Karte</span>
+      </button>
+
+      <button id="pause-button" class="flex flex-col items-center text-gray-600">
+        <i class="fa-solid fa-circle-pause text-xl"></i>
+        <span class="text-[11px]">Pause</span>
+      </button>
+
+      <button id="info-button" class="flex flex-col items-center text-gray-600">
+        <i class="fa-solid fa-circle-info text-xl"></i>
+        <span class="text-[11px]">Info</span>
+      </button>
+
+      <button id="unpause-button" class="flex flex-col items-center text-gray-600">
+        <i class="fa-solid fa-play text-xl"></i>
+        <span class="text-[11px]">Zurück</span>
+      </button>
+
+    </nav>
+
+  </div>
+
+
+  <div class="unpause-container">
+    <p id="text-unpause"></p>
+  </div>
+
+  <div id="infoWS" class="info-background">
+    <div class="info-container">
+      <div class="info-content">
+        <span class="close">&times;</span>
+        <p id="info-text" class="info-text"></p>
       </div>
     </div>
-    <p id="showme"></p>
-  </body>
-  <script type="module" src="src/app.js"></script>
-  <script
-    src="https://kit.fontawesome.com/34c3e261b7.js"
-    crossorigin="anonymous"
-  ></script>
-  <script type="module" src="src/buttons.js"></script>
+  </div>
+  <p id="showme"></p>
+</body>
+<script type="module" src="src/app.js"></script>
+<script src="https://kit.fontawesome.com/34c3e261b7.js" crossorigin="anonymous"></script>
+<script type="module" src="/src/style.js"></script>
+<script type="module" src="src/buttons.js"></script>
+
 </html>
