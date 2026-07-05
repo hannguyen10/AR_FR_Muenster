@@ -7,36 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ar-fr-muenster</title>
   </head>
-  <body>
-    <div class="logoBackground">
-      <img src="src/assets/Logo_Bauverein.png" class="logoFR" />
-    </div>
-    <h2 id="welcomeTitle">Ein Wasserspeier kommt selten allein</h2>
-    <div class="description">
-      <p class="text-3xl font-bold underline">
+   <body class="min-h-screen bg-stone-100 text-stone-800">
+    <main class="max-w-3xl mx-auto px-6 py-10"></main>
+   <div class="flex justify-center mb-8">
+        <img src="src/assets/Logo_Bauverein.png" class="h-24 object-contain"/>
+      </div>
+    <h1 class="text-4xl font-bold text-center text-stone-900 mb-8">Ein Wasserspeier kommt selten allein</h1>
+    
+    <section class="bg-white rounded-3xl shadow-lg p-8 space-y-5"></section>
+      <p class="text-xl font-semibold text-center leading-relaxed">
         Ob Tier, Mensch oder Monster: Das Freiburger Münster ist das Zuhause von
         über 90 Wasserspeiern.
       </p>
-      <p>
+      <p class="leading-7">
         17 der frechen Figuren könnt ihr bei einem Rundgang über den
         Münsterplatz näher kennenlernen.
       </p>
-      <p>Und so funktioniert's:</p>
-      <p>
+      <p class="text-lg font-semibold pt-2">Und so funktioniert's:</p>
+      <p class="leading-7">
         Scannt ihr bestimmte Wandflächen des Münsters, trefft ihr auf 3D-Modelle
         der Wasserspeier und sie verraten euch mehr über sich.
       </p>
-      <p>Sobald das Scansymbol zu sehen ist, kann es losgehen.</p>
-      <p>
+      <p class="leading-7">Sobald das Scansymbol zu sehen ist, kann es losgehen.</p>
+      <p class="leading-7">
         Scannt die Wandflächen unter den Wasserspeiern am Münster, bis ein
         3D-Modell erscheint. Dabei gilt: Ob ihr wirklich richtig steht, wisst
         ihr, wenn ihr einen Wasserspeier seht.
       </p>
-      <p>
+       <h2 class="text-lg font-semibold pt-2">
         Achtet auf folgende Punkte, um die gesuchten Wandflächen leichter zu
         finden:
-      </p>
-      <ul class="markerHints">
+       </h2>
+      <ul class="list-disc pl-6 space-y-2 leading-7">
         <li>
           Sucht nach besonderen Merkmalen auf den Steinflächen vor euch, zum
           Beispiel Symbole, Inschriften oder auffällige Oberflächen.
@@ -50,31 +52,36 @@
           steinernen Wasserspeier am Münster sehen.
         </li>
       </ul>
-      <p>
+      <p class="leading-7">
         Für eine bessere Orientierung schaut einfach auf die Karte, sie zeigt
         euch, wo sich die Modelle der Wasserspeier verstecken.
       </p>
-      <p id="funText">Viel Spaß beim Entdecken der Wasserspeier!</p>
-      <b>Hinweis</b>
-      <p>
+      <p class="text-center text-lg font-semibold text-red-700">Viel Spaß beim Entdecken der Wasserspeier!</p>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4"></div>
+       <h3 class="font-semibold mb-2">Hinweis</h3>
+      <p class="text-sm leading-6">
         Wegen Bauarbeiten oder Veranstaltungen auf dem Münsterplatz sind manche
         der Verstecke eventuell verstellt und können nicht gescannt werden.
         Kommt diese Wasserspeier gerne ein andermal besuchen.
       </p>
-    </div>
-    <div id="homeButtonsContainer">
-      <button class="homeButtons">
-        <a href="Wasserspeier_Karte.pdf" download>Karte herunterladen</a>
-      </button>
-      <button class="homeButtons">
-        <a href="app.html">Anwendung starten</a>
-      </button>
-      <button class="homeButtons">
-        <a href="legacy-app.html">Anwendung starten (legacy)</a>
-      </button>
-    </div>
-    <hr />
-    <p id="impressum"><a href="impressum.html">Impressum</a></p>
+    
+    <section class="mt-8 flex flex-col gap-4"></section>
+   
+      <a href="Wasserspeier_Karte.pdf" download class="rounded-xl bg-stone-200 hover:bg-stone-300 transition py-3 text-center font-medium">Karte herunterladen</a>
+       <a href="app.html" class="rounded-xl bg-red-700 hover:bg-red-800 transition py-3 text-center text-white font-semibold">Anwendung starten</a>
+      <a href="legacy-app.html" class="rounded-xl border border-stone-300 hover:bg-stone-100 transition py-3 text-center text-stone-600">Anwendung starten (legacy)</a>
+    
+    </section>
+    
+    <footer class="mt-10 text-center text-sm text-stone-500">
+        <a href="impressum.html" class="hover:underline">
+          Impressum
+        </a>
+      </footer>
+
+    </main>
+
 
     <!-- TODO: clean up below -->
     <!--<div id="app"></div>-->
